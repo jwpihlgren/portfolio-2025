@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --app-header-height: 80px;
+  --app-footer-height: 200px;
+}

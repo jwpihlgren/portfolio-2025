@@ -1,0 +1,17 @@
+.header {
+  height: var(--app-header-height);
+  background: var(--clr-surface-elevation-1, #272727);
+  color: var(--clr-on-surface-elevation-1, #ffffff);
+}
+
+.main {
+  min-height: calc(100dvh - var(--app-header-height));
+}
+
+
+.footer {
+  height: var(--app-footer-height);
+  background: var(--clr-surface-elevation-1, #272727);
+  color: var(--clr-on-surface-elevation-1, #ffffff);
+
+}
