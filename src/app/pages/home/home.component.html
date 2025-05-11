@@ -1,5 +1,8 @@
 <h1 i18n>Portfolio</h1>
 @for(section of sections(); track $index) {
-<app-titled-section [options]="{title: section.title, level: 2}"></app-titled-section>
+<section>
+  <h2>{{section.title}}</h2>
+  <ng-container *ngComponentOutlet="section.component"></ng-container>
+</section>
 }
 
