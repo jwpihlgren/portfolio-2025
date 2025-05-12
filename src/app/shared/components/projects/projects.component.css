@@ -1,16 +1,16 @@
 :host {
-  --item-aspect-ratio: 3/4;
-  --item-min-width: 300px;
+  --item-aspect-ratio: 320/388; /*Roughly 1,21*/
+  --item-min-width: calc(768px / 3);
   --item-border-radius: var(--radii-default, 15px);
-  --item-padding: var(--spacing-medium, 1rem);
+  --item-padding: var(--spacing-large, 2rem);
   --item-placeholder-bg-clr: var(--surface-elevation-3, #c4c4c4);
   --item-bg-clr: var(--surface-elevation-3, #c4c4c4);
-  --projects-gap: var(--spacing-medium, 1rem);
+  --projects-gap: var(--spacing-large, 2rem);
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--item-min-width), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--item-min-width), 1fr));
   gap: var(--projects-gap);
   list-style: none;
   margin: 0;

@@ -1,5 +1,10 @@
 :host {
-  --experiences-gap: var(--spacing-medium, 1rem);
+  --experiences-gap: var(--spacing-large, 2rem);
+  --item-min-height: 150px;
+  --item-bg-clr: var(--surface-elevation-3, #c4c4c4);
+  --item-placeholder-bg-clr: var(--surface-elevation-3, #c4c4c4);
+  --item-border-radius: var(--radii-default, 15px);
+  --item-padding: var(--spacing-large, 2rem);
 }
 
 .experiences {
@@ -10,6 +15,18 @@
   padding: 0;
   list-style: none;
 }
-.experiences__item {}
-.experiences__item, .experiences__item-placeholder {}
-.experiences__item-placeholder {}
+
+.experiences__item,
+.experiences__item-placeholder {
+  min-height: var(--item-min-height);
+  border-radius: var(--item-border-radius);
+  padding: var(--item-padding);
+}
+
+.experiences__item {
+  background: var(--item-bg-clr);
+}
+
+.experiences__item-placeholder {
+  background: var(--item-placeholder-bg-clr);
+}
