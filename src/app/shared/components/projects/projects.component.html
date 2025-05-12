@@ -1,5 +1,14 @@
 <ul class="projects">
-  @for(project of projects; track $index) {
+@defer(when projects() !== undefined) {
+  @let p = projects()!;
+  @for(project of p; track $index) {
   <li class="projects__item">{{project.title}}</li>
   }
+}
+@placeholder {
+    @for(project of placeholderProjects; track $index) {
+      <li class="projects__placeholder-item"></li>
+      }
+  }
 </ul>
+

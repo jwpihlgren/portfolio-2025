@@ -1,1 +1,13 @@
-<p>experience works!</p>
+<ul class="experiences">
+  @defer(when experiences() !== undefined) {
+  @let e = experiences()!;
+  @for(experience of e; track $index){
+  <li class="experiences__item">{{experience.title}}</li>
+  }
+  }
+  @placeholder {
+  @for(placeholder of placeholderExperiences; track $index){
+  <li class="experiences__item-placeholder"></li>
+  }
+  }
+</ul>

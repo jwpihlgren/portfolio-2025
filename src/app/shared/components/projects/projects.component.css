@@ -1,0 +1,33 @@
+:host {
+  --item-aspect-ratio: 3/4;
+  --item-min-width: 300px;
+  --item-border-radius: var(--radii-default, 15px);
+  --item-padding: var(--spacing-medium, 1rem);
+  --item-placeholder-bg-clr: var(--surface-elevation-3, #c4c4c4);
+  --item-bg-clr: var(--surface-elevation-3, #c4c4c4);
+  --projects-gap: var(--spacing-medium, 1rem);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--item-min-width), 1fr));
+  gap: var(--projects-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projects__item,
+.projects__placeholder-item {
+  aspect-ratio: var(--item-aspect-ratio);
+  border-radius: var(--item-border-radius);
+  padding: var(--item-padding);
+}
+
+.projects__item {
+  background-color: var(--item-bg-clr);
+}
+
+.projects__placeholder-item {
+  background-color: var(--item-placeholder-bg-clr);
+}

@@ -1,0 +1,15 @@
+:host {
+  --experiences-gap: var(--spacing-medium, 1rem);
+}
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: var(--experiences-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.experiences__item {}
+.experiences__item, .experiences__item-placeholder {}
+.experiences__item-placeholder {}
