@@ -1,1 +1,14 @@
-<p>skills works!</p>
+<ul class="skills">
+
+  @defer(when skills() !== undefined) {
+    @let s = skills()!;
+    @for(skill of s; track $index) {
+      <li class="skills__item" [attr.data-type]="skill.type">{{skill.skill}}</li>
+    }
+  }
+  @placeholder {
+  @for(placeholder of placeholderSkills; track $index) {
+  <li class="skills__placeholder-item"></li>
+  }
+  }
+</ul>

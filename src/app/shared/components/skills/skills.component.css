@@ -1,0 +1,25 @@
+:host {
+  --skills-gap: var(--spacing-medium, 1rem);
+}
+
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--skills-gap);
+}
+
+.skills__item,
+.skills__placeholder-item {}
+
+.skills__item {
+  color: gray;
+  text-transform: capitalize;
+}
+.skills__item[data-type="programming"] { color: red; }
+.skills__item[data-type="design"] { color: blue; }
+.skills__item[data-type="project"] { color: green; }
+
+.skills__placeholder-item {}
